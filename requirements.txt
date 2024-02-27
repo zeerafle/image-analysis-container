@@ -3,3 +3,4 @@ Flask
 python-dotenv
 azure-storage-blob
 azure-identity
+azure-ai-translation-text==1.0.0b1
