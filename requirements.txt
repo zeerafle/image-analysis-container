@@ -1,6 +1,7 @@
-azure-ai-vision-imageanalysis
 Flask
+gunicorn
 python-dotenv
+azure-ai-vision-imageanalysis
 azure-storage-blob
 azure-identity
 azure-ai-translation-text==1.0.0b1
