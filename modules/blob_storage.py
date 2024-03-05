@@ -1,16 +1,14 @@
 import os
 import uuid
-from azure.identity import DefaultAzureCredential
 from azure.storage.blob import BlobServiceClient
 import werkzeug
 
 
 try:
-    account_url = "https://imagecaptioningstore.blob.core.windows.net"
-    default_credential = DefaultAzureCredential()
+    connect_str = os.getenv('AZURE_STORAGE_CONNECTION_STRING')
 
     # Create the BlobServiceClient object
-    blob_service_client = BlobServiceClient(account_url=account_url, credential=default_credential)
+    blob_service_client = BlobServiceClient.from_connection_string(connect_str)
     # Create a unique name for the container
     container_name = 'image-blobs'
     # Create the container, will skip if it already exists
