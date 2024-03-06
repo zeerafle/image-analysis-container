@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, jsonify
 from modules.image_analysis import analyze_image
 from modules.blob_storage import upload_image_to_blob
 from modules.translation import translate_text
@@ -14,8 +14,10 @@ def image_analysis():
     if caption:
         print("Image analysis results:")
         print(" Caption:")
-        print(caption)
-        return translate_text(caption)
+        return jsonify({
+            'description': caption,
+            'translated_text': translate_text(caption)
+        })
 
 
 if __name__ == '__main__':
