@@ -1,3 +1,5 @@
+> I just realized that the implementation can be applied directly using REST API or Javascript NPM package (check out [the repo](https://github.com/zeerafle/see-to-word)). So no need to use container, upload the image to container, and then upload it to blob, which less efficient.
+
 # Azure AI Service Implementation For Image Analysis
 
 This code is an implementation of multiple Azure AI services.
